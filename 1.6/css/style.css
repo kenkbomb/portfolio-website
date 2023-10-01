@@ -1,0 +1,155 @@
+
+*{
+     box-sizing: border-box; 
+}
+body{
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(.8rem,2vw,2rem);
+    font-family: martian mono, sans-serif;
+    line-height: normal;
+    color: #088486;
+    margin: 0;
+    padding: 0;
+    
+}
+button{
+transition: 1s;
+}
+.works{
+    display: grid;
+    gap: 5%;
+    justify-content: center;
+    /* justify-items: center; */
+    grid-template-columns: 80vw;
+    /* align-items: center; */
+
+
+}
+.workItem{
+    border: solid black;
+}
+#portrait{
+    width:25vw;
+}
+button:hover{
+    opacity: 0.7;
+    transform: scale(1.1);
+    transition: 1s;
+    cursor: pointer;
+    
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    padding-bottom: 1vh;
+    /* border: 2px solid; */
+    margin-right: 5vw;
+    width: fit-content;
+    /* flex:1 1 0; */
+}
+nav img{
+    margin-left: 5%;
+}
+#nameCap{
+    text-transform: uppercase;
+    margin-left: 5vw;
+    /* border: 2px solid; */
+    overflow:visible;
+    width: fit-content;
+    
+    }
+
+a{
+    margin-left: 1vw;
+    margin-right: 1vw;
+    color: darkslategray;
+    text-decoration: none;
+}
+ #codecheck{
+    margin-left: 0;
+}
+a:visited{
+    color: blue;
+}
+a:active{
+    color: darkcyan;
+}
+a:hover{
+    transform: scale(1.1);
+}
+.socials{
+    width: fit-content;
+    margin: auto;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20vw;
+    text-align: center;
+    margin-top: 3vh;
+    margin-right: 15vw;
+    /* border: 2px solid; */
+     /* flex-basis: 200px; */
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+   width: fit-content;
+   margin: auto;
+    
+}
+
+li{
+    display: inline;
+}
+.homeMain{
+    display: flex;
+    gap:5%;
+    margin: 0 auto;
+    
+}
+footer{
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    bottom: .5vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    
+}
+#findme{
+    width:fit-content;
+    text-align: center;
+    margin: auto;
+    font-size: 1rem;
+    
+}
+
+li img{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    width: 10%;
+    border: solid rgba(0, 0, 0, 0.315);
+    border-radius: 50%;
+    }
+
+#mainText{
+    display: block;
+    width: 40vw;
+    
+
+}
+@media screen and (max-width:500px){
+    nav{flex-direction: column;
+    padding-bottom: 15vw;
+    }
+    }
+    nav img{
+        width:20vw;
+    }
