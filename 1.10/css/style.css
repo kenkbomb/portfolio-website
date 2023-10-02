@@ -1,0 +1,269 @@
+
+*{
+     box-sizing: border-box; 
+}
+
+:root{
+
+    --primeFontColor:#088486;
+    --linkColor:rgb(47,79,79);
+    --linkColorVisited:#025e33;
+    --responsiveFontSize:clamp(.8rem,1.7vw,2rem);
+    --centeredMargin:0 auto;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(.8rem,1.7vw,2rem);
+    font-family: martian mono, sans-serif;
+    line-height: normal;
+    color: var(--primeFontColor);
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    }
+
+@keyframes cloudGo{ 
+    0%{
+            transform:translate(0%,10%);
+    }
+    100%{
+        transform: translate(90%,10%);
+    }
+}
+@keyframes sunGlow{
+    0%{
+        transform: scale(.99,.99);
+    }
+    100%{
+        transform: scale(1,1.1)
+    }
+}
+.sun{
+animation-name: sunGlow;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+animation-direction: alternate-reverse;
+}
+.cloud-back{
+    animation-name: cloudGo;
+    animation-duration: 120s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.cloud-front{
+    animation-name: cloudGo;
+    animation-duration: 180s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#about-picture{
+    width:60vw;
+    margin: auto;
+    padding-bottom: 5%;
+   
+    
+}
+.greenSpan{
+    color: limegreen;
+}
+span{
+    background-color:aqua;
+}
+button{
+transition: 1s;
+}
+.works{
+    display: grid;
+    gap: 5%;
+    justify-content: center;
+   
+    margin-left: 5%;
+    margin-right: 5%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+.workItem{
+    border: solid black;
+    text-align: center;
+    width:20vw;
+}
+#portrait{
+    width:25vw;
+    min-width: 25vw;
+    border-radius: 50%;
+    border: solid var(--primeFontColor);
+}
+button:hover{
+    opacity: 0.7;
+    transform: scale(1.1);
+    transition: 1s;
+    cursor: pointer;
+    
+}
+nav{
+    display: flex;
+    flex-direction: row;
+   
+    padding-bottom: 5vw;
+    
+    /* margin-right: 5vw; */
+    width: fit-content;
+    /* border: solid; */
+   
+}
+nav img{
+    margin-left: 5%;
+}
+#nameCap{
+    text-transform: uppercase;
+    margin-left: 5vw;
+    
+    overflow:visible;
+    width: fit-content;
+    
+    }
+
+a{
+    margin-left: 1vw;
+    margin-right: 1vw;
+    color: var(--linkColor);
+    text-decoration: none;
+    transition: 1s;
+}
+ #codecheck{
+    margin-left: 0;
+}
+a:visited{
+    color: var(--linkColorVisited);
+}
+a:active{
+    color: darkcyan;
+}
+a:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    color:var(--linkColor);
+}
+.socials{
+    width: fit-content;
+    margin: auto;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20vw;
+    text-align: center;
+    margin-top: 3vh;
+    margin-right: 15vw;
+   
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+   width: fit-content;
+   margin-left: 2%;
+   margin-right: 2%;
+  
+   margin-bottom: 2%;
+    
+}
+
+li{
+    display: inline;
+}
+.homeMain{
+    display: flex;
+    gap:5%;
+    margin: var(--centeredMargin);
+    
+}
+footer{
+    width: 100%;
+    margin: auto;
+     position:fixed;
+    bottom: .2vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: white;
+    padding-top: 2%;
+    
+    
+}
+
+#findme{
+    width:fit-content;
+    text-align: center;
+    margin: var(--centeredMargin);
+    font-size: 1rem;
+    padding-left: 5%;
+    
+}
+
+li img{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    width: 10%;
+    
+}
+
+#mainText{
+    display: block;
+    width: 40vw;
+    
+
+}
+@media screen and (max-width:750px) {
+    .works{
+        grid-template-columns: 1fr 1fr;
+       
+    }
+    .workItem{
+        margin-bottom: 5%;
+        width:40vw;
+    }
+    .homeMain{
+        padding-top: 15vw;
+    }
+}
+@media screen and (max-width:500px){
+    nav{
+    padding-bottom: 5vw;
+    }
+    .works{
+        grid-template-columns: 1fr;
+    }
+    .workItem{
+        width: 80vw;
+    }
+    nav img{
+        width:20vw;
+    }
+    .links{
+        margin-left:10vw;
+    }
+    .homeMain{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      /* padding-top: 15vw; */
+    }
+    #mainText{
+       
+        width: 80vw;
+        text-align: center;
+    }
+    #portrait{
+        margin: var(--centeredMargin);
+        width: 40vw;
+    }
+    li img{
+        width:15vw;
+    }
+}
+   
