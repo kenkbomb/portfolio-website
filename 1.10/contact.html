@@ -25,7 +25,7 @@
         </div>
     </nav>
     </header>
-   <main>
+   <main class = 'contactSection'>
         <div class = 'contactInfo'>
             <p>
             <a href= "tel:+16474658277"> Tel: +1 647 465 8277</a>
@@ -36,17 +36,21 @@
             </p>
         </div>
 
-        <form method="post" id = 'contactForm'>
+        <form method="post" class= 'contactForm'>
+            <div class = 'contactItem'>
             <label>Contact Info</label>
+            </div>
             <br>
-            <label for = 'name' class = 'contactFormLabel'>Name: </label>
+            <div class = 'contactItem'>
+            <label for = 'name' class = 'contactFormLabel'>Name: </label><br>
+            </div>
             <input id = 'name' required>
             <br>
             <label for = 'email' class = 'contactFormLabel'>Email Address</label>
             <input id = 'email' type="email" required>
             <br>
             <label for = 'textarea' class="contactFormLabel">Message: </label>
-            <textarea id = 'textarea' maxlength="300"></textarea>
+            <textarea id = 'textarea' maxlength="300"></textarea><br>
             <button id = 'contactFormButton'>Confirm</button>
 
         </form>
